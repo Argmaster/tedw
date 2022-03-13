@@ -14,11 +14,15 @@ def task_1():
     Ac = A * c
     print(Ac)
     # 5
-    numpy
-
-
-
-
+    m4x4 = np.matrix(np.random.randint(1, 101, (4, 4)))
+    # Nie, macierze są tylko dwuwymiarowe, ndarray jest n-wymiarowa
+    print(m4x4)
+    # 6
+    cross = np.array([m4x4[i, i] for i in range(4)])
+    print(cross)
+    # 7
+    transposed = [[e] for e in cross]
+    print(transposed)
 
 
 if __name__ == "__main__":
