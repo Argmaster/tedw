@@ -1,0 +1,10 @@
+matplotlib
+numpy
+pandas
+scipy
+ipykernel
+jupyter
+notebook
+openpyxl
+flake8
+black
