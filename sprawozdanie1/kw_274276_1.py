@@ -130,7 +130,6 @@ class Session:
             A_TABLE[i] * (data_list[-1 - i] - data_list[i]) for i in range(m)
         )
         W = b**2 / S_sq
-        print(b, b**2, S_sq, W)
         return W > 0.927
 
     def nth_column_props(self, no: int):
