@@ -40,3 +40,18 @@ class Session:
 
     def run_PCA(self) -> PCAResutsView:
         return PCA(PumpkinSeed.new(self.autoscaled_data))
+
+    def view_c(self) -> None:
+        org = PCA(PumpkinSeed.new(self.autoscaled_data))
+
+        view = org.get_view_from_kaiser_criteria()
+        view.nd_data = view.nd_data[:1302]
+        fig, ax = view.show_principal_component_grid(20, color="#1f49bf01")
+
+        view2 = org.get_view_from_kaiser_criteria()
+        view2.nd_data = view2.nd_data[1302:]
+        fig, ax = view2.show_principal_component_grid(
+            10, color="#ad1c4501", fig=fig, axes=ax
+        )
+
+        fig.set_size_inches(20, 14)
